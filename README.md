@@ -90,6 +90,16 @@ cd "/Users/pirogan4ik/Desktop/שיעור 7" && uv run --with google-auth-oauthli
 
 By default it reads `GOOGLE_PRIVATE_DIR` or `/Users/pirogan4ik/Desktop/private` (overrideable with `--private-dir`), reuses the existing `client_secret*.json`, creates a timestamped backup (`token.json.bak.YYYYMMDD-HHMMSS`, mode `0600`) in that private directory after consent succeeds, and saves the updated `token.json` (mode `0600`) there without printing secrets or copying credentials into this repository. Restart the `gmail-calendar` MCP server after running it so the running server picks up the new token.
 
+## Screenshots
+
+![טיוטת תגובה ב-Gmail](screenshots/gmail-draft.png.jpeg)
+
+<p dir="rtl"><em>טיוטה ב-<bdi dir="ltr">Gmail</bdi> (<code dir="ltr">in:draft</code>) אל <code dir="ltr">katereutova71@gmail.com</code> בנושא <code dir="ltr">Re: Meeting request — volunteers schedule</code>, המאשרת פגישה בת <bdi dir="ltr">45</bdi> דקות ליום שלישי, <bdi dir="ltr">1</bdi> בדצמבר <bdi dir="ltr">2026</bdi>, בשעות <bdi dir="ltr">10:00–10:45</bdi> (<code dir="ltr">Asia/Jerusalem</code>), שמורה כטיוטה בלבד ללא שליחה.</em></p>
+
+![אירוע ב-Google Calendar](screenshots/calendar-event.png.jpeg)
+
+<p dir="rtl"><em>אירוע ב-<bdi dir="ltr">Google Calendar</bdi> בשם <code dir="ltr">Volunteers schedule meeting</code> ליום שלישי, <bdi dir="ltr">1</bdi> בדצמבר <bdi dir="ltr">2026</bdi>, בשעות <bdi dir="ltr">10:00–10:45AM</bdi> (<bdi dir="ltr">GMT+2</bdi>), עם תיאור הפגישה של <bdi dir="ltr">45</bdi> דקות לגבי לוח הזמנים למתנדבים.</em></p>
+
 ## Prompts Used Today
 
 *Combined chronological prompt history from the earlier setup session (prompts 1–6) and the current session (prompts 7–20).*
@@ -114,21 +124,38 @@ By default it reads `GOOGLE_PRIVATE_DIR` or `/Users/pirogan4ik/Desktop/private` 
 18. `Google authorization is complete. Retry the meeting-coordinator request using only the gmail-calendar MCP tools. Find and read the latest email with subject "Meeting request — volunteers schedule". Check availability for the requested date and time in Asia/Jerusalem. If free, create the 45-minute event and a confirmation reply draft. If busy, create only a reply draft suggesting two free times. Check for an existing matching event first to avoid duplicates. Never send anything. Do not modify code. Show the actual results step by step.`
 19. `The gmail-calendar MCP server has been restarted. Retry my previous meeting-coordinator request. Use MCP tools only, check for duplicates, and never send anything. Show the results step by step.`
 20. `Create reflection.md with four empty sections: 1. What did we ask the agent? 2. How did we check that the result is correct? 3. Which tool did we leave out, and why? 4. L05 vs. L06: what changed? Do not write the reflection answers; we will fill them ourselves. Add a numbered list of the actual prompts used today to README.md. Use available conversation history only. Do not invent missing prompts; tell me if earlier prompts are unavailable. Document the OAuth permissions issue and its resolution, and how to run scripts/authorize_oauth.py separately. Never include credentials or token contents. Show the changes. Do not commit or push yet.`
-21. `Create PRD.md for this existing assignment 03 project.
-Read the implementation and README.md first. Write in Hebrew with correct RTL/BiDi formatting for GitHub.Use English technical names where needed, keeping their direction correct.
-Include:
-1. Problem and goal: use an LLM with MCP tools to prepare a Gmail
-   draft and create a Google Calendar event.
-2. Intended users and main workflow.
-3. The six existing tools, their inputs and expected results.
-4. Requirements: stdio transport, uv, Asia/Jerusalem timezone,
-   credentials loaded from GOOGLE_PRIVATE_DIR outside the repository.
-5. Explicitly excluded capabilities: sending emails and deleting
-   emails or calendar events, with the reason for these limits.
-6. Acceptance criteria, distinguishing requirements from verified results.
-7. Known limitations: calendar pagination is not implemented;
-   MCP configuration contains machine-specific paths;
-   prompt-injection resistance has not been separately tested.
-8. Submission evidence still needed: Gmail and Google Calendar
-   screenshots embedded in README.md.
-Describe the existing project accurately. Do not invent features, screenshots, test results, or completed checks. Do not modify Python code, MCP configuration, or reflection.md. Do not access Google services or credentials. Append this exact user prompt to the numbered prompt history in README.md, continuing from the last number. Show the changes. Do not commit or push yet`
+21. ```text
+    Create PRD.md for this existing assignment 03 project.
+    Read the implementation and README.md first. Write in Hebrew with correct RTL/BiDi formatting for GitHub.Use English technical names where needed, keeping their direction correct.
+    Include:
+    1. Problem and goal: use an LLM with MCP tools to prepare a Gmail
+       draft and create a Google Calendar event.
+    2. Intended users and main workflow.
+    3. The six existing tools, their inputs and expected results.
+    4. Requirements: stdio transport, uv, Asia/Jerusalem timezone,
+       credentials loaded from GOOGLE_PRIVATE_DIR outside the repository.
+    5. Explicitly excluded capabilities: sending emails and deleting
+       emails or calendar events, with the reason for these limits.
+    6. Acceptance criteria, distinguishing requirements from verified results.
+    7. Known limitations: calendar pagination is not implemented;
+       MCP configuration contains machine-specific paths;
+       prompt-injection resistance has not been separately tested.
+    8. Submission evidence still needed: Gmail and Google Calendar
+       screenshots embedded in README.md.
+    Describe the existing project accurately. Do not invent features, screenshots, test results, or completed checks. Do not modify Python code, MCP configuration, or reflection.md. Do not access Google services or credentials. Append this exact user prompt to the numbered prompt history in README.md, continuing from the last number. Show the changes. Do not commit or push yet
+    ```
+22. `Show the complete contents of PRD.md for review.
+    Do not modify, commit, or push anything.`
+23. `In PRD.md, soften the security claim: excluding send/delete tools
+    reduces risk but does not guarantee protection from all errors or
+    prompt injection. Fix הנוכית → הנוכחית.
+    Commit only PRD.md and README.md as "Add PRD and project requirements".
+    Do not push. Reply briefly with commit hash and git status.`
+24. `Push main to origin without force. Reply briefly with the result.`
+25. `Embed screenshots/gmail-draft.png and screenshots/calendar-event.png
+    in README.md with short Hebrew captions describing the actual images.
+    Update PRD.md section 8 to reflect the evidence now included.
+    Format prompt 21 so its internal numbering does not break the main list.
+    Append the subsequent user prompts available in this session verbatim,
+    including this one, continuing from 22. Do not invent missing prompts.
+    Do not change code. Show a brief summary. Do not commit or push yet`

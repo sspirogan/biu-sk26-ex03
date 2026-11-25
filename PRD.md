@@ -188,12 +188,12 @@
   <li><strong>מגבלות מימוש נוספות הנצפות בקוד:</strong> חישוב הזמינות ב-<code dir="ltr">find_free_slots</code> מוגבל לחלון הקבוע <code dir="ltr">08:00-20:00</code> וליומן <code dir="ltr">primary</code> בלבד; האסימון הטעון נשמר במטמון התהליך (<code dir="ltr">_cached_creds</code>), ולכן לאחר רענון ידני של <code dir="ltr">token.json</code> נדרשת הפעלה מחדש של שרת ה-<bdi dir="ltr">MCP</bdi>.</li>
 </ul>
 
-<h2><bdi dir="ltr">8.</bdi> ראיות הגשה שעדיין נדרשות</h2>
+<h2><bdi dir="ltr">8.</bdi> ראיות הגשה</h2>
 
-<p>לצורך השלמת תיעוד ההגשה, עדיין חסרים ונדרשים להטמעה בתוך קובץ <code dir="ltr">README.md</code>:</p>
+<p>שני צילומי המסך הנדרשים לצורך הגשה שמורים בתיקיית <code dir="ltr">screenshots/</code> ומוטמעים כעת בקובץ <code dir="ltr">README.md</code> עם כיתובים בעברית:</p>
 <ul>
-  <li>צילום מסך מתוך <strong><bdi dir="ltr">Gmail</bdi></strong> המציג את הטיוטה שנוצרה באמצעות השרת (בתיקיית הטיוטות, ללא שליחה).</li>
-  <li>צילום מסך מתוך <strong><bdi dir="ltr">Google Calendar</bdi></strong> המציג את האירוע שנוצר ביומן עם התאריך, השעה ואזור הזמן המתאימים.</li>
+  <li><code dir="ltr">screenshots/gmail-draft.png.jpeg</code> — צילום מסך מתוך <strong><bdi dir="ltr">Gmail</bdi></strong> (<code dir="ltr">in:draft</code>) המציג את הטיוטה הפתוחה אל <code dir="ltr">katereutova71@gmail.com</code> בנושא <code dir="ltr">Re: Meeting request — volunteers schedule</code>, המאשרת פגישה בת <bdi dir="ltr">45</bdi> דקות ליום שלישי, <bdi dir="ltr">1</bdi> בדצמבר <bdi dir="ltr">2026</bdi>, בשעות <bdi dir="ltr">10:00–10:45</bdi> (<code dir="ltr">Asia/Jerusalem</code>), שמורה כטיוטה בלבד ללא שליחה.</li>
+  <li><code dir="ltr">screenshots/calendar-event.png.jpeg</code> — צילום מסך מתוך <strong><bdi dir="ltr">Google Calendar</bdi></strong> המציג את האירוע <code dir="ltr">Volunteers schedule meeting</code> ליום שלישי, <bdi dir="ltr">1</bdi> בדצמבר <bdi dir="ltr">2026</bdi>, בשעות <bdi dir="ltr">10:00–10:45AM</bdi> (<bdi dir="ltr">GMT+2</bdi>), הכולל תיאור של פגישה בת <bdi dir="ltr">45</bdi> דקות לגבי לוח הזמנים למתנדבים.</li>
 </ul>
 
 </div>
