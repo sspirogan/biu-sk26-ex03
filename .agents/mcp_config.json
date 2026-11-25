@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "gmail-calendar": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "/Users/pirogan4ik/Desktop/שיעור 7",
+        "gmail-calendar"
+      ],
+      "env": {
+        "GOOGLE_PRIVATE_DIR": "/Users/pirogan4ik/Desktop/private"
+      }
+    }
+  }
+}
