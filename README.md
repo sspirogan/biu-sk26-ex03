@@ -102,7 +102,7 @@ By default it reads `GOOGLE_PRIVATE_DIR` or `/Users/pirogan4ik/Desktop/private` 
 
 ## Prompts Used Today
 
-*Combined chronological prompt history across the earlier setup session (prompts 1–6), the tool-execution and OAuth troubleshooting session (prompts 7–20), and the documentation and submission session (prompts 21–28).*
+*Combined chronological prompt history across Alexandra's earlier setup session (prompts 1–6), Alexandra's tool-execution, OAuth troubleshooting, and reflection session (prompts 7–27), and Katrina's documentation and submission session (prompts 28–37).*
 
 1. `In one sentence: which folder are you working in, and is it empty?`
 2. `Check that the folder /Users/pirogan4ik/Desktop/private contains a Google client file (client_secret*.json) and a token.json file. Only tell me whether each file exists and its modification date. Do NOT print the contents of these files. Do not modify or copy them.`
@@ -125,6 +125,74 @@ By default it reads `GOOGLE_PRIVATE_DIR` or `/Users/pirogan4ik/Desktop/private` 
 19. `The gmail-calendar MCP server has been restarted. Retry my previous meeting-coordinator request. Use MCP tools only, check for duplicates, and never send anything. Show the results step by step.`
 20. `Create reflection.md with four empty sections: 1. What did we ask the agent? 2. How did we check that the result is correct? 3. Which tool did we leave out, and why? 4. L05 vs. L06: what changed? Do not write the reflection answers; we will fill them ourselves. Add a numbered list of the actual prompts used today to README.md. Use available conversation history only. Do not invent missing prompts; tell me if earlier prompts are unavailable. Document the OAuth permissions issue and its resolution, and how to run scripts/authorize_oauth.py separately. Never include credentials or token contents. Show the changes. Do not commit or push yet.`
 21. ```text
+    Fill reflection.md with the following answers in Hebrew.
+    Keep the four existing headings and preserve the meaning.
+    Do not commit or push yet.
+    1.
+    ביקשנו מהסוכן לבנות שרת MCP שמתחבר ל-Gmail ול-Google Calendar. לאחר מכן ביקשנו ממנו לקרוא בקשה לפגישה מהמייל, לבדוק אם הזמן פנוי ביומן, ליצור פגישה ולהכין טיוטת תשובה, בלי לשלוח אותה.
+    2.
+    בדקנו שהשרת מחובר ושמופיעים בו ששת הכלים שהגדרנו. הרצנו בדיקות ובחנו את הפלט של קריאות ה-MCP. השווינו את פרטי הפגישה שנוצרה לבקשה במייל: 1 בדצמבר, בשעה 10:00, למשך 45 דקות, לפי שעון ישראל. לפי תוצאת הכלי, התגובה נשמרה כטיוטה ולא נשלחה.
+    3.
+    לא הוספנו כלים לשליחת מיילים או למחיקת אירועים, כדי להשאיר את השליטה בפעולות הלה אצלנו ולצמצם טעויות. בדקנו את הגבול הזה כשביקשנו מהסוכן לשלוח טיוטה ולמחוק אירוע. בשני המקרים הוא הסביר שאין לו כלי מתאים ולא ביצע את הפעולה.
+    4.
+    ב-L05 עבדנו עם תוכנית Python שבה רצף הפעולות נקבע בקוד. ב-L06 בנינו שרת שמציע כלים קבועים, והסוכן בוחר באילו כלים להשתמש ובאיזה סדר לפי הבקשה שלנו. כך יכולנו לתת בקשה חדשה, כמו למצוא שעה פנויה ולקבוע פגישה, בלי לכתוב תוכנית חדשה לכל בקשה.
+    Show the complete reflection.md after updating it.
+    ```
+22. `Fix the RTL/BiDi formatting in reflection.md for GitHub rendering.
+    Use HTML blocks with dir="rtl" for Hebrew headings and paragraphs.
+    Wrap English terms, dates and times in <bdi dir="ltr">...</bdi>.
+    Use HTML headings and paragraphs inside the blocks, not Markdown syntax.
+    Translate the four headings into Hebrew.
+    Preserve the meaning and logical word order; never reverse Hebrew text.
+    Show the result in a rendered Markdown preview if available.
+    Do not commit or push yet.`
+23. `Create a temporary HTML preview of reflection.md outside the repository.
+    Use UTF-8 and preserve its RTL/BiDi formatting.
+    Open the preview in my default browser so I can check the Hebrew.
+    Do not modify reflection.md, commit, or push.`
+24. `In reflection.md, replace only the fourth heading with:
+    מה השתנה בין השיעור הקודם לשיעור הנוכחי?
+    Keep its existing number and RTL formatting.
+    Keep the answer unchanged.
+    Do not commit or push.`
+25. `Regenerate /tmp/reflection_preview.html from the current reflection.md
+    using UTF-8 and preserving RTL/BiDi formatting.
+    Open the updated preview in my browser.
+    Do not commit or push.`
+26. `I am providing the missing earlier conversation below.
+    Extract only the six user prompts marked with >.
+    Preserve their original wording and chronological order.
+    Remove copying-related Markdown escapes where necessary.
+    Insert these six prompts at the beginning of the prompt history
+    in README.md, before the current session's prompts.
+    If any were already added, do not duplicate those entries.
+    Use one continuous numbered list for all prompts: 1, 2, 3, ...
+    Do not restart numbering between sessions.
+    Update the note about unavailable earlier history, since this
+    earlier conversation has now been provided.
+    Do not include agent answers, thought summaries, command output,
+    or email/calendar data from the transcript.
+    Show the updated prompt list.
+    Do not commit or push yet.`
+27. `Review the current changes in README.md, reflection.md,
+    and scripts/authorize_oauth.py.
+    Confirm that no credentials, token contents, .env files,
+    or temporary preview files are included.
+    Run the existing unit tests and check the OAuth script syntax.
+    If the checks pass, stage only these three files and commit with:
+    "Document prompts, reflection and OAuth setup"
+    Show the commit result and git status --short.
+    Do not push yet.`
+28. ```text
+    Inspect this existing project without modifying anything.
+    Confirm the current folder, Git remote, branch, working-tree status,
+    and the Git author name and email configured for commits.
+    Read README.md and list the project files.
+
+    Do not run Google authorization or access Gmail or Calendar.
+    Do not modify, commit, or push anything yet
+    ```
+29. ```text
     Create PRD.md for this existing assignment 03 project.
     Read the implementation and README.md first. Write in Hebrew with correct RTL/BiDi formatting for GitHub.Use English technical names where needed, keeping their direction correct.
     Include:
@@ -144,31 +212,33 @@ By default it reads `GOOGLE_PRIVATE_DIR` or `/Users/pirogan4ik/Desktop/private` 
        screenshots embedded in README.md.
     Describe the existing project accurately. Do not invent features, screenshots, test results, or completed checks. Do not modify Python code, MCP configuration, or reflection.md. Do not access Google services or credentials. Append this exact user prompt to the numbered prompt history in README.md, continuing from the last number. Show the changes. Do not commit or push yet
     ```
-22. `Show the complete contents of PRD.md for review.
+30. `Show the complete contents of PRD.md for review.
     Do not modify, commit, or push anything.`
-23. `In PRD.md, soften the security claim: excluding send/delete tools
+31. `In PRD.md, soften the security claim: excluding send/delete tools
     reduces risk but does not guarantee protection from all errors or
     prompt injection. Fix הנוכית → הנוכחית.
     Commit only PRD.md and README.md as "Add PRD and project requirements".
     Do not push. Reply briefly with commit hash and git status.`
-24. `Push main to origin without force. Reply briefly with the result.`
-25. `Embed screenshots/gmail-draft.png and screenshots/calendar-event.png
+32. `Push main to origin without force. Reply briefly with the result.`
+33. `Embed screenshots/gmail-draft.png and screenshots/calendar-event.png
     in README.md with short Hebrew captions describing the actual images.
     Update PRD.md section 8 to reflect the evidence now included.
     Format prompt 21 so its internal numbering does not break the main list.
     Append the subsequent user prompts available in this session verbatim,
     including this one, continuing from 22. Do not invent missing prompts.
     Do not change code. Show a brief summary. Do not commit or push yet`
-26. `Check that both README image links resolve to valid image files.
+34. `Check that both README image links resolve to valid image files.
     Commit only README.md, PRD.md and the two screenshots with message
     "Add Gmail and Calendar evidence". Push main to origin without force.
     Reply briefly with commit hash and final git status.`
-27. `Fix README screenshot captions: write the start and end times separately
+35. `Fix README screenshot captions: write the start and end times separately
     in Hebrew, each time wrapped in <bdi dir="ltr">, to avoid reversed ranges.
     Update the prompt-history introduction to cover all listed sessions.
     Commit README.md as "Fix evidence captions and history description"
     and push without force. Reply briefly.`
-28. `Append the user prompts sent after prompt 25 to README.md,
+36. `Append the user prompts sent after prompt 25 to README.md,
     verbatim and chronologically, continuing from 26.
     Use available history only; do not duplicate entries.
     Commit README.md and push without force. Reply briefly`
+37. `Check the numbered prompt history in README.md against the conversation history available to you. Add any missing actual user prompts from your session, preserving their wording and order. Keep continuous numbering without duplicates. Do not invent or reconstruct Alexandra’s missing prompts: those will be provided separately. Do not include agent replies or command outputs.
+    Show what you added. Do not commit or push yet.`
