@@ -94,15 +94,15 @@ By default it reads `GOOGLE_PRIVATE_DIR` or `/Users/pirogan4ik/Desktop/private` 
 
 ![טיוטת תגובה ב-Gmail](screenshots/gmail-draft.png.jpeg)
 
-<p dir="rtl"><em>טיוטה ב-<bdi dir="ltr">Gmail</bdi> (<code dir="ltr">in:draft</code>) אל <code dir="ltr">katereutova71@gmail.com</code> בנושא <code dir="ltr">Re: Meeting request — volunteers schedule</code>, המאשרת פגישה בת <bdi dir="ltr">45</bdi> דקות ליום שלישי, <bdi dir="ltr">1</bdi> בדצמבר <bdi dir="ltr">2026</bdi>, בשעות <bdi dir="ltr">10:00–10:45</bdi> (<code dir="ltr">Asia/Jerusalem</code>), שמורה כטיוטה בלבד ללא שליחה.</em></p>
+<p dir="rtl"><em>טיוטה ב-<bdi dir="ltr">Gmail</bdi> (<code dir="ltr">in:draft</code>) אל <code dir="ltr">katereutova71@gmail.com</code> בנושא <code dir="ltr">Re: Meeting request — volunteers schedule</code>, המאשרת פגישה בת <bdi dir="ltr">45</bdi> דקות ליום שלישי, <bdi dir="ltr">1</bdi> בדצמבר <bdi dir="ltr">2026</bdi>, משעה <bdi dir="ltr">10:00</bdi> עד <bdi dir="ltr">10:45</bdi> (<code dir="ltr">Asia/Jerusalem</code>), שמורה כטיוטה בלבד ללא שליחה.</em></p>
 
 ![אירוע ב-Google Calendar](screenshots/calendar-event.png.jpeg)
 
-<p dir="rtl"><em>אירוע ב-<bdi dir="ltr">Google Calendar</bdi> בשם <code dir="ltr">Volunteers schedule meeting</code> ליום שלישי, <bdi dir="ltr">1</bdi> בדצמבר <bdi dir="ltr">2026</bdi>, בשעות <bdi dir="ltr">10:00–10:45AM</bdi> (<bdi dir="ltr">GMT+2</bdi>), עם תיאור הפגישה של <bdi dir="ltr">45</bdi> דקות לגבי לוח הזמנים למתנדבים.</em></p>
+<p dir="rtl"><em>אירוע ב-<bdi dir="ltr">Google Calendar</bdi> בשם <code dir="ltr">Volunteers schedule meeting</code> ליום שלישי, <bdi dir="ltr">1</bdi> בדצמבר <bdi dir="ltr">2026</bdi>, משעה <bdi dir="ltr">10:00</bdi> עד <bdi dir="ltr">10:45AM</bdi> (<bdi dir="ltr">GMT+2</bdi>), עם תיאור הפגישה של <bdi dir="ltr">45</bdi> דקות לגבי לוח הזמנים למתנדבים.</em></p>
 
 ## Prompts Used Today
 
-*Combined chronological prompt history from the earlier setup session (prompts 1–6) and the current session (prompts 7–20).*
+*Combined chronological prompt history across the earlier setup session (prompts 1–6), the tool-execution and OAuth troubleshooting session (prompts 7–20), and the documentation and submission session (prompts 21–25).*
 
 1. `In one sentence: which folder are you working in, and is it empty?`
 2. `Check that the folder /Users/pirogan4ik/Desktop/private contains a Google client file (client_secret*.json) and a token.json file. Only tell me whether each file exists and its modification date. Do NOT print the contents of these files. Do not modify or copy them.`
