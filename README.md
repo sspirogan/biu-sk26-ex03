@@ -114,3 +114,21 @@ By default it reads `GOOGLE_PRIVATE_DIR` or `/Users/pirogan4ik/Desktop/private` 
 18. `Google authorization is complete. Retry the meeting-coordinator request using only the gmail-calendar MCP tools. Find and read the latest email with subject "Meeting request — volunteers schedule". Check availability for the requested date and time in Asia/Jerusalem. If free, create the 45-minute event and a confirmation reply draft. If busy, create only a reply draft suggesting two free times. Check for an existing matching event first to avoid duplicates. Never send anything. Do not modify code. Show the actual results step by step.`
 19. `The gmail-calendar MCP server has been restarted. Retry my previous meeting-coordinator request. Use MCP tools only, check for duplicates, and never send anything. Show the results step by step.`
 20. `Create reflection.md with four empty sections: 1. What did we ask the agent? 2. How did we check that the result is correct? 3. Which tool did we leave out, and why? 4. L05 vs. L06: what changed? Do not write the reflection answers; we will fill them ourselves. Add a numbered list of the actual prompts used today to README.md. Use available conversation history only. Do not invent missing prompts; tell me if earlier prompts are unavailable. Document the OAuth permissions issue and its resolution, and how to run scripts/authorize_oauth.py separately. Never include credentials or token contents. Show the changes. Do not commit or push yet.`
+21. `Create PRD.md for this existing assignment 03 project.
+Read the implementation and README.md first. Write in Hebrew with correct RTL/BiDi formatting for GitHub.Use English technical names where needed, keeping their direction correct.
+Include:
+1. Problem and goal: use an LLM with MCP tools to prepare a Gmail
+   draft and create a Google Calendar event.
+2. Intended users and main workflow.
+3. The six existing tools, their inputs and expected results.
+4. Requirements: stdio transport, uv, Asia/Jerusalem timezone,
+   credentials loaded from GOOGLE_PRIVATE_DIR outside the repository.
+5. Explicitly excluded capabilities: sending emails and deleting
+   emails or calendar events, with the reason for these limits.
+6. Acceptance criteria, distinguishing requirements from verified results.
+7. Known limitations: calendar pagination is not implemented;
+   MCP configuration contains machine-specific paths;
+   prompt-injection resistance has not been separately tested.
+8. Submission evidence still needed: Gmail and Google Calendar
+   screenshots embedded in README.md.
+Describe the existing project accurately. Do not invent features, screenshots, test results, or completed checks. Do not modify Python code, MCP configuration, or reflection.md. Do not access Google services or credentials. Append this exact user prompt to the numbered prompt history in README.md, continuing from the last number. Show the changes. Do not commit or push yet`
