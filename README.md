@@ -102,7 +102,7 @@ By default it reads `GOOGLE_PRIVATE_DIR` or `/Users/pirogan4ik/Desktop/private` 
 
 ## Prompts Used Today
 
-*Combined chronological prompt history across the earlier setup session (prompts 1–6), the tool-execution and OAuth troubleshooting session (prompts 7–20), and the documentation and submission session (prompts 21–25).*
+*Combined chronological prompt history across the earlier setup session (prompts 1–6), the tool-execution and OAuth troubleshooting session (prompts 7–20), and the documentation and submission session (prompts 21–28).*
 
 1. `In one sentence: which folder are you working in, and is it empty?`
 2. `Check that the folder /Users/pirogan4ik/Desktop/private contains a Google client file (client_secret*.json) and a token.json file. Only tell me whether each file exists and its modification date. Do NOT print the contents of these files. Do not modify or copy them.`
@@ -159,3 +159,16 @@ By default it reads `GOOGLE_PRIVATE_DIR` or `/Users/pirogan4ik/Desktop/private` 
     Append the subsequent user prompts available in this session verbatim,
     including this one, continuing from 22. Do not invent missing prompts.
     Do not change code. Show a brief summary. Do not commit or push yet`
+26. `Check that both README image links resolve to valid image files.
+    Commit only README.md, PRD.md and the two screenshots with message
+    "Add Gmail and Calendar evidence". Push main to origin without force.
+    Reply briefly with commit hash and final git status.`
+27. `Fix README screenshot captions: write the start and end times separately
+    in Hebrew, each time wrapped in <bdi dir="ltr">, to avoid reversed ranges.
+    Update the prompt-history introduction to cover all listed sessions.
+    Commit README.md as "Fix evidence captions and history description"
+    and push without force. Reply briefly.`
+28. `Append the user prompts sent after prompt 25 to README.md,
+    verbatim and chronologically, continuing from 26.
+    Use available history only; do not duplicate entries.
+    Commit README.md and push without force. Reply briefly`
